@@ -1,14 +1,40 @@
-//
-//  main.cpp
-//  Project1
-//
-//  Created by Takao Oba on 6/27/22.
-//
-
+/*
+ Name - Takao Oba
+ UID - 205615894
+ Project 1
+*/
+#include "Robot.h"
+#include "Player.h"
+#include "Arena.h"
+#include "Game.h"
+#include "globals.h"
+#include "Previous.h"
 #include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+//////////////////////////////////////////////////////////////////////////
+//  main()
+//////////////////////////////////////////////////////////////////////////
+///
+int main()
+{
+      // Initialize the random number generator.  (You don't need to
+      // understand how this works.)
+    srand(static_cast<unsigned int>(time(0)));
+
+      // Create a game
+      // Use this instead to create a mini-game:   Game g(3, 3, 2);
+    Game g(15, 18, 80);
+
+      // Play the game
+    g.play();
 }
+
+
+
+
+
